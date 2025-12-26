@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "vehicle-tweaks",
+  "version": "${version}",
+  "name": "Vehicle Tweaks",
+  "description": "Increases the max speed of vanilla boats as well as decreasing the drag factor. Adds speed display for the player, boats, minecarts.",
+  "authors": [
+    "L4852"
+  ],
+  "contact": {
+    "homepage": "N/A",
+    "sources": "N/A"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/vehicle-tweaks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.l4852.VehicleTweaks"
+    ]
+  },
+  "mixins": [
+    "vehicle-tweaks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
