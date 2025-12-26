@@ -48,13 +48,15 @@ public abstract class PlayerSpeedMixin {
                 if (Math.abs(currentPlayerVelocity.y) < 0.5) {
                     currentPlayerVelocity = new Vec3d(currentPlayerVelocity.x, 0, currentPlayerVelocity.z);
                 }
-                long playerSpeed = Math.round(3.6 * 20 * currentPlayerVelocity.length());
+                if (Math.round(currentPlayerVelocity.length() * 20 * 3.6) > 0.0) {
+                    long playerSpeed = Math.round(3.6 * 20 * currentPlayerVelocity.length());
 
-                String speedString = playerSpeed + " km/h";
+                    String speedString = playerSpeed + " km/h";
 
-                Text text = Text.literal(speedString);
+                    Text text = Text.literal(speedString);
 
-                client.player.sendMessage(text, true);
+                    client.player.sendMessage(text, true);
+                }
             }
         }
     }
